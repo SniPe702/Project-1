@@ -1,7 +1,13 @@
 *{
     padding: 0%;
     margin: 0%;
+    box-sizing: border-box;
 }
+
+body{
+    background-color: rgb(1, 22, 10);
+}
+
 .haut{
     position: relative;
   width: 100%;
@@ -62,7 +68,6 @@
 
 header{
     display: flex;
-    background-color: rgb(1, 22, 10);
     height: 110px;
     
     
@@ -96,11 +101,84 @@ header{
     overflow-x: hidden;
   }
   
-.content4{
-    background-color: rgb(1, 54, 25);
-}
+
 
 *{
     font-family: Arial, Helvetica, sans-serif;
+}
+
+.content4 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  z-index: 2;
+  width: 90%;
+  max-width: 800px;
+  padding-top: 1720px;
+  font-family: 'Arial', sans-serif;
+}
+
+.step1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.step2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.syep3 {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.button1 {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border: 1px solid #fff;
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.button1:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.vid2{
+  z-index: ;
+}
+
+
+
+
+
+@media (max-width: 768px) {
+  .step1 {
+    font-size: 1.8rem;
+  }
+
+  .step2 {
+    font-size: 1.3rem;
+  }
+
+  .syep3 {
+    font-size: 0.9rem;
+  }
 }
 
