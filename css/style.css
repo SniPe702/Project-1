@@ -10,10 +10,8 @@
 body{
     background-color: rgb(1, 22, 10);
 }
-.content2{
-  position: relative;
-  z-index: 10;
-}
+
+
 .haut{
     position: relative;
   width: 100%;
@@ -22,7 +20,7 @@ body{
 }
 
 .vid1{
-    position: absolute;
+    position: fixed;
     min-width: 100%;
     min-height: 100%;
     max-width: 100%;
@@ -30,33 +28,11 @@ body{
     object-fit: cover;
     top: 0;
     left: 0;
-    z-index: 1;
+    z-index: 0;
     
 }
 
-.content3 {
-    position: relative;
-    z-index: 2;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    padding-top: 640px;
-    align-items: flex-start;
-    padding-left: 5%;
-    color: white;
-    
-  }
 
-  .content3 h1 {
-    font-size: 4em;
-    font-weight: 700;
-    line-height: 1.2;
-    margin: 0 0 20px 0;
-  }
-  
-  .content3 span {
-    font-size: 1.2em;
-  }
   
   .button1 {
     padding: 12px 24px;
@@ -72,36 +48,86 @@ body{
     color: black;
   }
 
-header{
+  
+header {
+  position: relative;
+  z-index: 10;
     display: flex;
+    align-items: center;
+    justify-content: space-between;
     height: 110px;
-    
+    padding: 0 5vw;
     
 }
 
-.logo{
-    width: 250px;
+.logo {
+    width: 180px;
+    max-width: 15vw;
     cursor: pointer;
 }
 
-.content2{
-  display: flex;
-  justify-content: center; 
-  align-items: center;
-  list-style: none;
-  gap: 90px;
-  padding-left: 20vw; 
-  padding-top: 45px;
+.content2 {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    list-style: none;
+    gap: 3vw;
+    margin: 0;
+    padding: 0;
 }
+
 .content2 li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
     font-family: 'Times New Roman', Times, serif, sans-serif;
-  }
-  .content2 li a:hover {
+}
+
+.content2 li a:hover {
     color: #00ffcc6e; 
-    margin-bottom: 100%;
+    margin-bottom: 5px;
+    transition: margin-bottom 0.2s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    .content2 {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 20px 5vw;
+    }
+
+    .logo {
+        margin-bottom: 20px;
+    }
+}
+
+  .content3 {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 560px;
+    align-items: flex-start;
+    padding-left: 5%;
+    color: white;
+    
+  }
+
+  .content3 h1 {
+    font-size: 4em;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0 0 20px 0;
+  }
+  
+  .content3 span {
+    font-size: 1.2em;
   }
 
   body {
@@ -148,6 +174,8 @@ header{
 }
 
 .button1 {
+  position: relative;
+  z-index: 100;
   display: inline-block;
   padding: 0.75rem 1.5rem;
   border: 1px solid #fff;
@@ -178,26 +206,21 @@ header{
   margin-top: 90px;
 }
 
-.maison-aston {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-}
-
 .content5{
   position: relative;
   z-index: 2;
-  text-align: center; 
+  padding-left: 25px;
   color: white;
-  padding-top: 650px;
-  padding-right: 170px;
+  margin-top: 579px;
 }
 
 .content5 h2{
   font-size: 2.8em;
   margin-bottom: 20px;
   letter-spacing: 2px; 
+  font-family: "Cal Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 .content5 p{
   font-size: 1.2em;
@@ -205,7 +228,28 @@ header{
   margin: 0 auto; 
   line-height: 1.6;
 }
+
+.content5 a{
+  text-decoration: none;
+}
+
+.span2{
+  color: rgb(1, 190, 83);
+}
+
 .img1{
+  position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    margin-top: 1600px;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.img1-record{
   position: absolute;
     min-width: 100%;
     min-height: 100%;
@@ -233,3 +277,72 @@ header{
   }
 }
 
+.vid2-record{
+  width: 1300px;
+}
+
+
+
+
+
+.bodymodel {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background-color: rgb(164, 172, 172);
+}
+
+.car-gallery {
+  padding: 40px 20px;
+}
+
+.title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #2e8b57;
+  display: inline-block;
+  padding-bottom: 5px;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+}
+
+.models {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.model {
+  text-align: center;
+  max-width: 400px;
+}
+
+.model img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.model h3 {
+  margin: 0;
+  font-size: 16px;
+  color: white;
+}
+
+.btn-container {
+  margin-top: 50px;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: 2px solid black;
+  text-decoration: none;
+  color: black;
+  border-radius: 20px;
+  font-weight: bold;
+}
